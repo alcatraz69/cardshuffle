@@ -35,7 +35,7 @@ const CardDeck = () => {
     let tempDeck = cards;
     for (let i = 0; i < tempDeck.length; i++) {
       let tempCard = tempDeck[i];
-      let randomIndex = Math.floor(Math.random() * 52);
+      let randomIndex = Math.floor(Math.random() * tempDeck.length);
       tempDeck[i] = tempDeck[randomIndex];
       tempDeck[randomIndex] = tempCard;
     }
