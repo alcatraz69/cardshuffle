@@ -1,0 +1,37 @@
+.card {
+  height: 250px;
+  width: 185px;
+  padding: 3px;
+  margin-left: -2px;
+  background-color: white;
+  color: Black;
+  box-shadow: 4px 4px 15px 2px #000000bf;
+  border-radius: 14px 0px 0px 14px;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.shuffleBtn {
+  padding: 10px 20px;
+}
+
+.pickedCardsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.pickedCard {
+  height: 250px;
+  width: 185px;
+  padding: 3px;
+  box-shadow: 4px 4px 15px 2px #000000bf;
+  border-radius: 14px 14px 14px 14px;
+  background-color: white;
+  color: Black;
+  margin: 10px;
+}
