@@ -59,7 +59,6 @@ const CardDeck = () => {
   const [deck, setDeck] = useState(data);
   const [pickedCards, setPickedCards] = useState([]);
   const [error, setError] = useState(false);
-  console.log(deck.length);
   function shuffleCard(cards) {
     let tempDeck = cards;
     for (let i = 0; i < tempDeck.length; i++) {
@@ -78,11 +77,11 @@ const CardDeck = () => {
       fiveCards.push(element);
     }
     let leftOverCards = cards.filter((item) => !fiveCards.includes(item));
-    console.log(leftOverCards);
     return { fiveCards, leftOverCards };
   }
 
   function handleShuffle() {
+    setDeck(data);
     let changedArr = shuffleCard([...deck]);
     setDeck(changedArr);
   }
@@ -90,7 +89,6 @@ const CardDeck = () => {
     if (deck.length < 5) {
       setError(true);
     } else {
-      setPickedCards([]);
       let { fiveCards, leftOverCards } = pickFive([...deck]);
       setPickedCards(fiveCards);
       setDeck(leftOverCards);
